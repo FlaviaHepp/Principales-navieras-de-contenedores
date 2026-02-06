@@ -1,208 +1,132 @@
-# Principales-navieras-de-contenedores
-Análisis de las Principales Navieras de Contenedores del Mundo
-
-Se hizo un análisis exploratorio y visualización de datos de las 30 mayores navieras de contenedores, incluyendo métricas como capacidad TEU, número de barcos y cuota de mercado.
-**Análisis de Datos:**
-Exploración inicial para identificar datos duplicados y valores faltantes.
-Generación de estadísticas descriptivas y correlaciones entre las métricas clave como "Total TEU", "Número de barcos" y "Cuota de mercado".
-**Visualización:**
-Gráficos interactivos (bar, pie, histogramas) generados con Plotly para visualizar la capacidad y cuota de mercado de las empresas.
-Mapas de calor con matrices de correlación para entender la relación entre características numéricas.
-Nubes de palabras para identificar tendencias y patrones en las empresas más destacadas.
-
-**Resultados Clave:**
-Visualización clara del liderazgo de MSC y Maersk en capacidad TEU y cuota de mercado.
-Insights sobre la distribución de barcos y cuotas entre las principales alianzas navieras.
-Herramientas utilizadas: Python, Pandas, NumPy, Matplotlib, Seaborn, Plotly, WordCloud.
-Herramientas de visualización avanzadas para gráficos interactivos y presentación de datos.
-
-🚢 Análisis de las Mayores Navieras de Contenedores del Mundo
+# 🚢 Análisis de las Mayores Navieras de Contenedores del Mundo
 
 Este proyecto realiza un análisis exploratorio de datos (EDA) sobre las 30 mayores navieras de contenedores del mundo, clasificadas por capacidad de flota en TEU (Twenty-foot Equivalent Unit), según datos de Alphaliner (febrero 2024).
 
 El análisis se centra en comparar capacidad operativa, cuota de mercado, número de barcos y alianzas, utilizando visualizaciones estáticas e interactivas para comprender la estructura y concentración del sector marítimo global.
 
-🎯 Objetivos del proyecto
+## 🎯Objetivos del proyecto
 
-Analizar la distribución de capacidad (TEU) entre las principales navieras.
+- Analizar la distribución de capacidad (TEU) entre las principales navieras.
+- Comparar la cuota de mercado de cada empresa.
+- Estudiar la relación entre:
+- Número de barcos
+- Capacidad total (TEU)
+- Participación de mercado
+- Identificar niveles de concentración del sector.
+- Explorar características cualitativas como alianzas y sedes corporativas.
 
-Comparar la cuota de mercado de cada empresa.
-
-Estudiar la relación entre:
-
-Número de barcos
-
-Capacidad total (TEU)
-
-Participación de mercado
-
-Identificar niveles de concentración del sector.
-
-Explorar características cualitativas como alianzas y sedes corporativas.
-
-🌍 Contexto del sector
+## 🌍Contexto del sector
 
 El transporte marítimo de contenedores es un pilar del comercio internacional.
 En enero de 2022, MSC superó a Maersk como la naviera con mayor capacidad por primera vez desde 1996, marcando un cambio estructural en el liderazgo del sector.
 
 📌 Comprender esta industria es clave para:
+- Análisis económico global
+- Supply chain & logística
+- Comercio exterior
+- Estudios de competencia y concentración de mercado
 
-Análisis económico global
-
-Supply chain & logística
-
-Comercio exterior
-
-Estudios de competencia y concentración de mercado
-
-📊 Dataset
+## 📊Dataset
 
 Fuente: Alphaliner
-
 Fecha: Febrero 2024
-
 Observaciones: 30 compañías
-
 Formato: CSV
 
-Variables principales
-
-Rank: Posición en el ranking mundial
-
-Company name: Nombre de la naviera
-
-Headquarters: Sede central
-
-TotalTEU: Capacidad total de la flota (TEU)
-
-Ships: Número de barcos
-
-Marketshare: Cuota de mercado (%)
-
-Alliance: Alianza marítima
-
-Notes: Observaciones relevantes
+Variables principales:
+- Rank: Posición en el ranking mundial
+- Company name: Nombre de la naviera
+- Headquarters: Sede central
+- TotalTEU: Capacidad total de la flota (TEU)
+- Ships: Número de barcos
+- Marketshare: Cuota de mercado (%)
+- Alliance: Alianza marítima
+- Notes: Observaciones relevantes
 
 📌 El dataset no presenta valores nulos ni duplicados significativos.
 
-🔍 Metodología
+## 🔍Metodología
+
 1️⃣ Inspección y limpieza de datos
 
-Revisión de estructura y tipos de datos.
-
-Estadísticos descriptivos.
-
-Verificación de valores nulos y duplicados.
+- Revisión de estructura y tipos de datos.
+- Estadísticos descriptivos.
+- Verificación de valores nulos y duplicados.
 
 2️⃣ Análisis Exploratorio (EDA)
+
 📦 Capacidad y cuota de mercado
 
 Gráficos de barras de:
-
-Capacidad total (TEU)
-
-Cuota de mercado (%)
-
-Gráficos circulares para visualizar concentración del mercado.
+- Capacidad total (TEU)
+- Cuota de mercado (%)
+- Gráficos circulares para visualizar concentración del mercado.
 
 🚢 Flota
 
-Comparación del número de barcos por compañía.
-
-Análisis horizontal y vertical para mejorar legibilidad.
+- Comparación del número de barcos por compañía.
+- Análisis horizontal y vertical para mejorar legibilidad.
 
 📊 Distribuciones
 
-Histogramas de variables numéricas.
-
-Análisis de dispersión y asimetría.
+- Histogramas de variables numéricas.
+- Análisis de dispersión y asimetría.
 
 🔗 Correlaciones
 
 Matriz de correlación entre:
 
-TEU
-
-Número de barcos
-
-Cuota de mercado
+- TEU
+- Número de barcos
+- Cuota de mercado
 
 🏢 Variables categóricas
 
 Distribución por:
 
-Sede (Headquarters)
-
-Alianzas marítimas
-
-Conteos y gráficos de frecuencia.
+- Sede (Headquarters)
+- Alianzas marítimas
+- Conteos y gráficos de frecuencia.
 
 3️⃣ Análisis textual
 
-WordCloud basado en nombres de compañías para visualización exploratoria.
+- WordCloud basado en nombres de compañías para visualización exploratoria.
+- Uso de Counter para frecuencias de términos.
 
-Uso de Counter para frecuencias de términos.
+## 📈Principales hallazgos
 
-📈 Principales hallazgos
+- El mercado presenta alta concentración, con pocas navieras controlando gran parte de la capacidad global.
+- Existe una fuerte correlación positiva entre:
+- Número de barcos
+- Capacidad total (TEU)
+- Cuota de mercado
+- Las alianzas juegan un rol clave en la competitividad del sector.
+- El tamaño de flota no siempre crece proporcionalmente al número de barcos, reflejando diferencias tecnológicas y de eficiencia.
 
-El mercado presenta alta concentración, con pocas navieras controlando gran parte de la capacidad global.
+## 🛠️Tecnologías y Librerías
 
-Existe una fuerte correlación positiva entre:
+- Python
+- Pandas / NumPy
+- Matplotlib
+- Seaborn
+- Plotly Express
+- WordCloud
 
-Número de barcos
+## 📁Estructura del proyecto
 
-Capacidad total (TEU)
-
-Cuota de mercado
-
-Las alianzas juegan un rol clave en la competitividad del sector.
-
-El tamaño de flota no siempre crece proporcionalmente al número de barcos, reflejando diferencias tecnológicas y de eficiencia.
-
-🛠️ Tecnologías y Librerías
-
-Python
-
-Pandas / NumPy
-
-Matplotlib
-
-Seaborn
-
-Plotly Express
-
-WordCloud
-
-📁 Estructura del proyecto
 ├── The largest shipping lines in the world.csv
 ├── 1.py
 └── README.md
-▶️ Cómo ejecutar el proyecto
 
-Clonar el repositorio:
+## 🚀Posibles extensiones
 
-git clone https://github.com/tu-usuario/global-shipping-analysis.git
+- Análisis de concentración (Índice Herfindahl-Hirschman).
+- Evolución histórica del ranking por año.
+- Comparación pre y post pandemia.
+- Dashboard interactivo (Power BI / Tableau / Dash).
+- Integración con datos de comercio internacional.
 
-Instalar dependencias:
-
-pip install pandas numpy matplotlib seaborn plotly wordcloud
-
-Ejecutar el script:
-
-python 1.py
-🚀 Posibles extensiones
-
-Análisis de concentración (Índice Herfindahl-Hirschman).
-
-Evolución histórica del ranking por año.
-
-Comparación pre y post pandemia.
-
-Dashboard interactivo (Power BI / Tableau / Dash).
-
-Integración con datos de comercio internacional.
-
-👤 Autor
+## 👤Autor
 
 Flavia Hepp
 Proyecto de análisis de datos aplicado a logística, comercio internacional y transporte marítimo.
